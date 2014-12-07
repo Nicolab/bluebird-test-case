@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mocha"    : "^2.0.1",
+    "noder.io" : "^1.1.0",
+    "request"  : "^2.49.0",
+    "unit.js"  : "^1.1.0"
+  },
+
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/index.js"
+  }
+}
