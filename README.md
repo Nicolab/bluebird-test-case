@@ -5,5 +5,7 @@ A test case for several instance of Bluebird, related to the [Unit.js issue #5](
   * `npm install`
   * `npm test`
 
-The [test](test/index.js) fail.
+<del>The [test](test/index.js) fail.</del>
+
+Fixed and released in the v1.1.1
 
