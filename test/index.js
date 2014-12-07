@@ -34,4 +34,25 @@ describe('HTTP promise', function() {
       .finally(done)
       .done();
   });
+
+  it('should work with `resolve()`', function(done) {
+    var request = noder.$di.get('httpRequest');
+
+    test.promise
+      .resolve(request.getAsync('http://google.com'))
+      .spread(function (res, body) {
+        test
+          .number(res.statusCode)
+            .is(200)
+
+          .string(body)
+            .contains('google')
+        ;
+      })
+      .catch(function (err) {
+        test.fail(err.message);
+      })
+      .finally(done)
+      .done();
+  });
 });
